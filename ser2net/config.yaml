@@ -5,7 +5,7 @@ slug: ser2net
 description: >
   Expose serial ports over the network, including RFC2217 support
   for remote port settings change (e.g. baud rate or RTS)
-url: https://github.com/jhollowe/addon-ser2net
+url: https://github.com/pvi25/addon-ser2net
 codenotary: codenotary@johnhollowell.com
 arch:
   - aarch64
