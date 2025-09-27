@@ -24,10 +24,21 @@ uart: true # auto-map serial devices into the container
 # usb: true
 options:
   serial_device: /dev/ttyACM0
-  max_connections: 1
+  max_connections: 4
   enable_admin_interface: true
+  baud_rate: '115200'
+  parity: "n"
+  data_bits: '8'
+  stop_bits: '1'
+  protocol: tcp
+  log_level: info
 schema:
   serial_device: device(subsystem=tty)
   max_connections: int
   enable_admin_interface: bool
+  baud_rate: list(300|1200|2400|4800|9600|19200|38400|57600|115200)
+  parity: list(n|e|o)
+  data_bits: list(5|6|7|8)
+  stop_bits: list(1|2)
+  protocol: list(tcp|telnet|rfc2217)
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
